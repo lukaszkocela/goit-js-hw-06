@@ -20,7 +20,12 @@ document
     images
       .map(
         (image) =>
-          `<li><img class="gallery_picture" src= "${image.url}" alt= "${image.alt}" style="margin 10px; height: 100px"/></li>`
+          `<li><img class="gallery_picture" src= "${image.url}" alt= "${image.alt}" style="height: 200px"/></li>`
       )
       .join("")
   );
+
+const gallery = document.querySelector(".gallery");
+gallery.style.listStyle = "none";
+gallery.style.display = "flex";
+gallery.style.justifyContent = "space-between";
